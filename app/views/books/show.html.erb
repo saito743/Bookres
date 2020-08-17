@@ -1,0 +1,5 @@
+<h5>Title:</h5>
+<%= @book.title %>
+<h5>Body:</h5>
+<%= @book.body %>
+<%= link_to "Destroy",destroy_books_path(@book.id), method: :delete  %>

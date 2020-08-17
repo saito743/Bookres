@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   get 'books/index' => 'books#index'
   get 'books/:id/edit' => 'books#edit', as:'edit_books'
   patch 'books/:id' => 'books#update'
+  get 'books/:id' => 'books#show',as:'show_books'
+ delete 'books/:id' => 'books#destroy', as: 'destroy_books'
 end
