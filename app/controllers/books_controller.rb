@@ -8,7 +8,8 @@ class BooksController < ApplicationController
 	    @book = Book.new(book_params)
 	    @books = Book.all
 	    if @book.save
-	    redirect_to books_path
+	    redirect_to show_books_path(@book.id)
+	    flash[:complete] = "Book was successfully created."
 	  else
 		render :template => "books/new"
 	  end
@@ -25,7 +26,8 @@ class BooksController < ApplicationController
 	def update
 	  @book = Book.find(params[:id])
 	  if @book.update(book_params)
-	     redirect_to books_path
+	     redirect_to show_books_path
+	     flash[:complete] = "Book was successfully created."
 	  else
          render 'edit'
       end

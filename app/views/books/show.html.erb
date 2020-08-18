@@ -1,7 +1,8 @@
+<%= flash[:complete] %>
 <p><strong>Title:</strong>
 <%= @book.title %></p>
 <p><strong>Body:</strong>
 <%= @book.body %></p>
-<p><%= link_to "show",show_books_path(@book.id) %>|
-<%= link_to "back",books_path %></p>
+<p><%= link_to "Edit",edit_books_path(@book.id) %>|
+<%= link_to "Back",books_path %></p>
 
