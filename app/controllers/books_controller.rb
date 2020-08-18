@@ -1,15 +1,15 @@
 class BooksController < ApplicationController
 	def new
 	  @book = Book.new
-	  @books = Book.all
 	end
 
 	def create
 	    @book = Book.new(book_params)
+	    @books = Book.all
 	    if @book.save
 	    redirect_to books_path
 	  else
-		redirect_to books_url
+		render :template => "books/new"
 	  end
 	end
 

@@ -1,12 +1,11 @@
 <h3>Editing Book</h3>
 <%= form_for(@book,url:"/books/#{@book.id}") do |f| %>
 <% if @book.errors.any? %>
-    <div class="alert alert-danger">
-      <ul>
+    <div>
+
       <% @book.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+        <ul><li><%= msg %></li></ul>
       <% end %>
-      </ul>
     </div>
   <% end %>
 <p>title</p>
