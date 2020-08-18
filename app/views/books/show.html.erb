@@ -2,4 +2,6 @@
 <%= @book.title %>
 <strong>Body:</strong>
 <%= @book.body %>
-<td><%= link_to "Edit",edit_books_path(@book.id)%></td>
+<p><%= link_to "Edit",edit_books_path(@book.id)%></p>
+<p><%= link_to "Back",books_path %></p>
+
