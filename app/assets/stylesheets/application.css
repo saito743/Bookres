@@ -19,16 +19,27 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-
+body{
+	font-size: 13px;
+	color: #333333;
+}
 strong{
 	font-family: verdana, arial, helvetica, sans-serif;
 }
 
-.top{
+.top, .new{
 	margin: 33px;
 	line-height: 18px;
-	font-size: 13px;
 }
 .top-body{
 	margin: 33px;
 }
+
+
+
+
+
+
+
+
+
