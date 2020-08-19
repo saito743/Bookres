@@ -1,6 +1,6 @@
 <div class="new">
   <%= flash[:delete] %>
-<h1><strong>Books</strong></h1>
+<h1 class="index-title"><strong>Books</strong></h1>
 <table>
     <tr>
       <th>Title</th>
@@ -18,20 +18,28 @@
   <% end %>
   </table>
 
-<h2>New book</h2>
+<h2 class="new-title"><strong>New book</strong></h2>
 <%= form_for(@book) do |f| %>
+
   <% if @book.errors.any? %>
-    <div>
-      <p><%= @book.errors.count %>errors prohibited this book from being saved:</p>
+    <div id="error_explanation">
+      <h2><strong><%= @book.errors.count %>errors prohibited this book from being saved:</strong></h2>
+      <ul>
       <% @book.errors.full_messages.each do |msg| %>
-        <ul><li><%= msg %></li></ul>
+          <li><%= msg %></li>
       <% end %>
+      </ul>
     </div>
+
     <% end %>
-<p>Title</p>
-<%= f.text_field :title %>
-<p>Body</p>
-<%= f.text_area :body %>
-<%= f.submit "Create Book" %>
+<div class="field">
+  <%= f.label :title, "Title" %>
+  <%= f.text_field :title %>
+</div>
+<div class="field">
+  <%= f.label :body, "Body" %>
+  <%= f.text_area :body %>
+</div>
+  <%= f.submit "Create Book" %>
 <% end %>
 </div>
