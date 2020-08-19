@@ -1,5 +1,5 @@
 <div class="new">
-  <%= flash[:delete] %>
+  <p id="success"><%= flash[:delete] %></p>
 <h1 class="index-title"><strong>Books</strong></h1>
 <table>
     <tr>
@@ -30,8 +30,8 @@
       <% end %>
       </ul>
     </div>
-
     <% end %>
+
 <div class="field">
   <%= f.label :title, "Title" %>
   <%= f.text_field :title %>

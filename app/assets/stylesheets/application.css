@@ -52,11 +52,12 @@ h1, h2{
     background-color: red;
     display: table;
 }
+
 .top-body{
 	margin: 33px;
 }
 
-.index-title{
+.index-title, .edit-title{
 	margin: 17.42px 0 ;
 }
 th{
@@ -74,13 +75,24 @@ p, ol, ul, td {
 .new-title{
 	margin: 16.185px 0;
 }
-.field{
+.field,.actions{
 	margin-bottom: 10px;
 }
 label{
 	display: block;
 }
-
+#book_body{
+	padding: 2px;
+}
+#book_title{
+	padding:1px 2px;
+}
+input{
+	padding: 1px 6px;
+}
+#success{
+	color: green;
+}
 
 
 
